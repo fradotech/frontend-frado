@@ -109,6 +109,7 @@ const Header = () => {
             </svg>
           </div>
         </div>
+
         {/* Responsive Sidebar Layout */}
         <MobileNav sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
       </div>
