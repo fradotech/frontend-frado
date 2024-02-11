@@ -11,7 +11,7 @@ import Link from 'next/link'
 
 const PostCard = () => {
   return (
-    <div className="card w-fit p-4 border-base-content/10 rounded-xl font-work shadow">
+    <div className="card w-fit p-4 border-base-content/10 rounded-xl font-work shadow-[0_8px_16px_-6px] shadow-base-content/20">
       <figure>
         <Image
           src="https://placehold.it/360x240"
