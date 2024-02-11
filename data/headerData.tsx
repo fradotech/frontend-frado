@@ -8,10 +8,6 @@ export const headerData = [
     link: '/blog',
   },
   {
-    name: 'Single Post',
-    link: '/single-post',
-  },
-  {
     name: 'Author',
     link: '/author',
   },
