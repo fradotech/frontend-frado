@@ -13,7 +13,7 @@ import MobileNav from './MobileNav'
  * @returns React component that can be easily integrated into any web application.
  */
 const Header = () => {
-  const { theme, setTheme, lightMode } = useMode()
+  const { theme, setTheme, themes, hydrationError, lightMode } = useMode()
   const [sidebarOpen, setSidebarOpen] = React.useState<boolean>(false)
 
   return (
@@ -72,6 +72,7 @@ const Header = () => {
                 </svg>
               </div>
             </div>
+
             {/* Theme Switcher */}
             <input
               type="checkbox"
@@ -89,7 +90,7 @@ const Header = () => {
             />
 
             {/*Multi themes switcher */}
-            {/* <div className="flex-none">
+            <div className="flex-none">
               <div className="dropdown dropdown-end">
                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                   <div className="w-7 rounded-full">
@@ -145,7 +146,7 @@ const Header = () => {
                   ))}
                 </ul>
               </div>
-            </div> */}
+            </div>
 
             {/* Responsive Sidebar Menu */}
             <svg
