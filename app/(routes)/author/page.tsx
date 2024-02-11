@@ -1,6 +1,6 @@
-import AuthorInfo from '@/components/organism/authorInfo/AuthorInfo'
-import LatestPost from '@/components/organism/latestPost/LatestPost'
-import { config } from '@/utils/config'
+import AuthorInfo from '@/app/_components/organism/authorInfo/AuthorInfo'
+import LatestPost from '@/app/_components/organism/latestPost/LatestPost'
+import { config } from '@/app/_utils/config'
 
 export const metadata = {
   title: `Author Page | ${config.app.name}`,

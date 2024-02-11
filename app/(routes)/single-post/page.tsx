@@ -1,4 +1,4 @@
-import { config } from '@/utils/config'
+import { config } from '@/app/_utils/config'
 import Image from 'next/image'
 
 export const metadata = {

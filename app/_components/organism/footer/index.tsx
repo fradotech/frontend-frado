@@ -1,6 +1,6 @@
-import { CompanyLogo } from '@/components/molecules/Identity/Logo'
-import NewsLetter from '@/components/molecules/newsletter/NewsLetter'
-import { FooterDataTwo } from '@/data/footerData'
+import { CompanyLogo } from '@/app/_components/molecules/Identity/Logo'
+import NewsLetter from '@/app/_components/molecules/newsletter/NewsLetter'
+import { FooterDataTwo } from '@/app/_data/footerData'
 import Link from 'next/link'
 
 /**

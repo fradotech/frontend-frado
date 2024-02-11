@@ -5,12 +5,12 @@ type TProps = {
   children: React.ReactNode
 }
 
-interface contextProps {
+type TContextProps = {
   value: string
   setValue: React.Dispatch<React.SetStateAction<string>>
 }
 
-const GlobalContext = React.createContext<contextProps>({
+const GlobalContext = React.createContext<TContextProps>({
   value: 'light',
   setValue: () => {},
 })
