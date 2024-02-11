@@ -1,6 +1,6 @@
-import { CompanyLogo } from '@/app/_components/molecules/Identity/Logo'
-import NewsLetter from '@/app/_components/molecules/newsletter/NewsLetter'
-import { FooterDataTwo } from '@/app/_data/footerData'
+import { FooterTags } from '@/app/_data/footerData'
+import { CompanyLogo } from '@/components/molecules/Identity/Logo'
+import NewsLetter from '@/components/molecules/newsletter/NewsLetter'
 import Link from 'next/link'
 
 /**
@@ -54,7 +54,7 @@ const Footer = () => {
                 Category
               </h5>
               <div className="flex flex-col gap-y-2 mt-6">
-                {FooterDataTwo.map((item: any, index: number) => (
+                {FooterTags.map((item: any, index: number) => (
                   <div key={index}>
                     <Link
                       href={item.link}

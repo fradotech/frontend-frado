@@ -1,31 +1,4 @@
-export const FooterDataOne = [
-  {
-    name: 'Home',
-    link: '/',
-  },
-  {
-    name: 'About',
-    link: '#',
-  },
-  {
-    name: 'Blog',
-    link: '/blog',
-  },
-  {
-    name: 'Archived',
-    link: '#',
-  },
-  {
-    name: 'Author',
-    link: '/author',
-  },
-  {
-    name: 'Contact',
-    link: '#',
-  },
-]
-
-export const FooterDataTwo = [
+export const FooterTags = [
   {
     name: 'Life style',
     link: '#',

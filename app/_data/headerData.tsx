@@ -1,4 +1,4 @@
-export const headerData = [
+export const headerMenus = [
   {
     name: 'Home',
     link: '/',

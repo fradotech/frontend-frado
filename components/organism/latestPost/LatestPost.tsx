@@ -1,4 +1,4 @@
-import PostCard from '@/app/_components/molecules/card/PostCard'
+import PostCard from '@/components/molecules/card/PostCard'
 import Link from 'next/link'
 
 const LatestPost = () => {

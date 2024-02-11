@@ -1,7 +1,7 @@
 'use client'
-import { CompanyLogo } from '@/app/_components/molecules/Identity/Logo'
-import { headerData } from '@/app/_data/headerData'
+import { headerMenus } from '@/app/_data/headerData'
 import useMode from '@/app/_utils/themeMode'
+import { CompanyLogo } from '@/components/molecules/Identity/Logo'
 import Link from 'next/link'
 import React from 'react'
 import { FaMoon, FaSun } from 'react-icons/fa'
@@ -35,7 +35,7 @@ const Header = () => {
           </div>
           <nav className="hidden xl:block col-span-6">
             <div className=" w-full flex items-center justify-center gap-10">
-              {headerData.map((item: any, index: number) => (
+              {headerMenus.map((item: any, index: number) => (
                 <div key={index}>
                   <Link
                     href={item.link}

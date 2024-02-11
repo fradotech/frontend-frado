@@ -1,4 +1,4 @@
-import { headerData } from '@/app/_data/headerData'
+import { headerMenus } from '@/app/_data/headerData'
 import Link from 'next/link'
 import React from 'react'
 
@@ -20,7 +20,7 @@ const MobileNav = ({ sidebarOpen, setSidebarOpen }: SidebarLayoutProps) => {
     <nav>
       <div className="block xl:hidden">
         <div
-          className={`overflow-y-auto z-40 flex pt-5 top-0 flex-col h-screen w-full max-w-[300px] fixed bg-base-200  duration-500 ease-in  gap-2 md:gap-0 shadow-xl ${
+          className={`overflow-y-auto z-40 flex pt-5 top-0 flex-col h-screen w-full max-w-[300px] fixed bg-base-200  duration-100 ease-in  gap-2 md:gap-0 shadow-xl ${
             sidebarOpen ? 'left-0' : '-left-full'
           }`}
         >
@@ -75,7 +75,7 @@ const MobileNav = ({ sidebarOpen, setSidebarOpen }: SidebarLayoutProps) => {
               </svg>
             </div>
             {/*  menu lists */}
-            {headerData.map((item: any, index: number) => (
+            {headerMenus.map((item: any, index: number) => (
               <Link
                 href={item.link}
                 key={index}

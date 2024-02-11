@@ -1,7 +1,7 @@
-import BannerCard from '@/app/_components/molecules/card/BannerCard'
-import Advertisement from '@/app/_components/organism/advertisement/Advertisement'
-import LatestPost from '@/app/_components/organism/latestPost/LatestPost'
 import { config } from '@/app/_utils/config'
+import BannerCard from '@/components/molecules/card/BannerCard'
+import Advertisement from '@/components/organism/advertisement/Advertisement'
+import LatestPost from '@/components/organism/latestPost/LatestPost'
 
 export const metadata = {
   title: `Home Page | ${config.app.name}`,

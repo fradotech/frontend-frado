@@ -1,8 +1,8 @@
-import PostCard from '@/app/_components/molecules/card/PostCard'
-import PostOverlayCard from '@/app/_components/molecules/card/PostOverlayCard'
-import Advertisement from '@/app/_components/organism/advertisement/Advertisement'
-import PageInfo from '@/app/_components/organism/pageInfo/PageInfo'
 import { config } from '@/app/_utils/config'
+import PostCard from '@/components/molecules/card/PostCard'
+import PostOverlayCard from '@/components/molecules/card/PostOverlayCard'
+import Advertisement from '@/components/organism/advertisement/Advertisement'
+import PageInfo from '@/components/organism/pageInfo/PageInfo'
 
 export const metadata = {
   title: `Blog Page | ${config.app.name}`,
