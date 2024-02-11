@@ -1,5 +1,5 @@
+import { CompanyLogo } from '@/components/molecules/Identity/Logo'
 import NewsLetter from '@/components/molecules/newsletter/NewsLetter'
-import { Favicon } from '@/components/organism/header'
 import { FooterDataTwo } from '@/data/footerData'
 import Link from 'next/link'
 
@@ -74,7 +74,7 @@ const Footer = () => {
         <div className="flex flex-col gap-4 md:gap-0 md:flex-row items-center justify-between py-8 bg-base-200 border-t border-base-content/10">
           <div className="flex items-center gap-2.5">
             <Link href="/">
-              <Favicon className={`text-base-content`} />
+              <CompanyLogo className={`text-base-content`} />
             </Link>
             <div>
               <h4 className="text-xl text-base-content font-sans">Fradotech</h4>
