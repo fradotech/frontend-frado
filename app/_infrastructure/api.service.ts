@@ -2,23 +2,20 @@ import axios, { AxiosError, AxiosHeaders, RawAxiosRequestHeaders } from 'axios'
 import { config } from './config'
 import { IApiRes } from './interfaces/api-responses.interface'
 
-const headers: RawAxiosRequestHeaders | AxiosHeaders = {
-  Authorization: `Bearer ${localStorage.getItem('_accessToken')}`,
-  backofficeToken: process.env.BACKOFFICE_TOKEN,
-}
+const headers: RawAxiosRequestHeaders | AxiosHeaders = {}
 
-const axiosInstance = axios.create({ baseURL: config.server.host, headers })
+const axiosInstance = axios.create({ baseURL: config.server.hostApi, headers })
 
 const notificationError = (e: AxiosError<IApiRes<unknown>>): void => {
-  if (e.response?.data.message === 'Forbidden') {
-    return
-  } else if (e.response?.data.message === 'Unauthorized') {
-    localStorage.removeItem('_accessToken')
-    localStorage.removeItem('user')
-    location.reload()
-  }
+  // if (e.response?.data.message === 'Forbidden') {
+  //   return
+  // } else if (e.response?.data.message === 'Unauthorized') {
+  //   localStorage.removeItem('_accessToken')
+  //   localStorage.removeItem('user')
+  //   location.reload()
+  // }
 
-  return console.error({ message: e.response?.data?.message || String(e) })
+  console.error({ apiError: e.response?.data?.message || String(e) })
 }
 
 export class API {
@@ -77,6 +74,6 @@ export class API {
   }
 
   private static catch(res: any): void {
-    !res.data && console.error({ message: res.response.data.message })
+    !res.data && console.error({ apiError: res.response.data.message })
   }
 }
