@@ -1,4 +1,4 @@
-import { config } from '@/app/_utils/config'
+import { config } from '@/app/_infrastructure/config'
 import BannerCard from '@/components/molecules/card/BannerCard'
 import Advertisement from '@/components/organism/advertisement/Advertisement'
 import LatestPost from '@/components/organism/latestPost/LatestPost'

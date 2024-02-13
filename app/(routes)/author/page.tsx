@@ -1,4 +1,4 @@
-import { config } from '@/app/_utils/config'
+import { config } from '@/app/_infrastructure/config'
 import AuthorInfo from '@/components/organism/authorInfo/AuthorInfo'
 import LatestPost from '@/components/organism/latestPost/LatestPost'
 

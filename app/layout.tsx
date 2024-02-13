@@ -1,6 +1,6 @@
 'use client'
 import { GlobalProvider } from '@/app/_context/store'
-import { Providers } from '@/app/_utils/themeMode'
+import { Providers } from '@/app/_infrastructure/themeMode'
 import Footer from '@/components/organism/footer'
 import Header from '@/components/organism/header'
 import { Plus_Jakarta_Sans, Work_Sans } from 'next/font/google'
