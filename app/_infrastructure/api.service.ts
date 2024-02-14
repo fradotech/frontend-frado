@@ -21,13 +21,13 @@ const notificationError = (e: AxiosError<IApiRes<unknown>>): void => {
 export class API {
   static async get(endpoint: string, params?: any): Promise<any> {
     try {
-      const { data } = await axiosInstance.get(endpoint, {
-        params,
+      const data = await fetch(`${config.server.hostApi}${endpoint}`, {
+        next: { revalidate: 60 },
       })
 
-      this.catch(data)
+      this.catch({ data })
 
-      return data
+      return data.json()
     } catch (e: unknown) {
       notificationError(e as AxiosError<IApiRes<unknown>>)
       return e
