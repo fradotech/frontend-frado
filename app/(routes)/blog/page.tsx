@@ -1,7 +1,7 @@
 import { config } from '@/app/_infrastructure/config'
-import PostCard from '@/components/molecules/card/PostCard'
 import PostOverlayCard from '@/components/molecules/card/PostOverlayCard'
 import Advertisement from '@/components/organism/advertisement/Advertisement'
+import LatestPost from '@/components/organism/latestPost/LatestPost'
 import PageInfo from '@/components/organism/pageInfo/PageInfo'
 import { PostAction } from './_infrastructure/post.action'
 
@@ -25,16 +25,7 @@ const BlogListing = async () => {
         </section>
 
         <section className="my-20">
-          <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {data.map((item) => (
-              <PostCard key={item.id} data={item} />
-            ))}
-          </div>
-          <div className="flex items-center justify-center w-full mt-8">
-            <button className="btn btn-outline btn-secondary font-work px-5 text-base font-medium">
-              Load More
-            </button>
-          </div>
+          <LatestPost data={data} />
         </section>
 
         <section className="mb-24">

@@ -7,7 +7,7 @@ export interface IPost extends IBaseEntity {
   url: string
   summary: string
   imageUrl: string
-  tags: string
+  tags: { id: string; name: string }[]
   slug: string
   content: string
   author: string
