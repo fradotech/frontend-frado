@@ -17,7 +17,7 @@ type TProps = {
 
 const PostCard: (props: TProps) => JSX.Element = (props: TProps) => {
   return (
-    <div className="card w-fit p-2 border-base-content/10 rounded-xl">
+    <div className="card w-fit p-2 border-b md:border-b-0">
       <Link href="/single-post">
         <figure>
           <Image
@@ -25,6 +25,7 @@ const PostCard: (props: TProps) => JSX.Element = (props: TProps) => {
             alt="image_post"
             width={360}
             height={240}
+            style={{ maxHeight: '240px', minHeight: '240px' }}
           />
         </figure>
       </Link>
@@ -63,12 +64,14 @@ const PostCard: (props: TProps) => JSX.Element = (props: TProps) => {
             )
           })}
         </div>
-        <div className="mt-2 flex justify-between">
-          <p className="text-base">{Util.formatDate(props.data.createdAt)}</p>
-          <p className="text-base">{`${
-            props.data.readingTimeInMinutes || 2
-          } min read`}</p>
-        </div>
+        <Link href="/single-post">
+          <div className="mt-2 flex justify-between">
+            <p className="text-base">{Util.formatDate(props.data.createdAt)}</p>
+            <p className="text-base">{`${
+              props.data.readingTimeInMinutes || 2
+            } min read`}</p>
+          </div>
+        </Link>
       </div>
     </div>
   )
