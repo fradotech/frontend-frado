@@ -1,4 +1,5 @@
 import { IPost } from '@/app/(routes)/blog/_infrastructure/post.interface'
+import { Util } from '@/app/_infrastructure/util'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -29,7 +30,16 @@ const PostCard: (props: TProps) => JSX.Element = (props: TProps) => {
       </Link>
       <div className="card-body py-6 px-2">
         <Link href="/single-post">
-          <h4 className="mb-2">{props.data.title}</h4>
+          <h4
+            className="mb-2 overflow-hidden overflow-ellipsis"
+            style={{
+              display: '-webkit-box',
+              WebkitBoxOrient: 'vertical',
+              WebkitLineClamp: 2,
+            }}
+          >
+            {props.data.title}
+          </h4>
           <p
             className="mb-2 overflow-hidden overflow-ellipsis"
             style={{
@@ -37,10 +47,11 @@ const PostCard: (props: TProps) => JSX.Element = (props: TProps) => {
               WebkitBoxOrient: 'vertical',
               WebkitLineClamp: 3,
             }}
-            dangerouslySetInnerHTML={{ __html: props.data.content }}
-          />
+          >
+            {props.data.summary}
+          </p>
         </Link>
-        <div className="flex space-x-2">
+        <div className="flex mt-4 space-x-2">
           {props.data.tags?.map((data) => {
             return (
               <span
@@ -51,6 +62,12 @@ const PostCard: (props: TProps) => JSX.Element = (props: TProps) => {
               </span>
             )
           })}
+        </div>
+        <div className="mt-2 flex justify-between">
+          <p className="text-base">{Util.formatDate(props.data.createdAt)}</p>
+          <p className="text-base">{`${
+            props.data.readingTimeInMinutes || 2
+          } min read`}</p>
         </div>
       </div>
     </div>

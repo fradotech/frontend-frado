@@ -57,7 +57,7 @@ export class Util {
   }
 
   static formatDate = (date: Date | string | dayjs.Dayjs) => {
-    const newDate = dayjs(date).format('YYYY-MM-DD')
+    const newDate = dayjs(date).format('MMMM DD, YYYY')
     return newDate === 'Invalid Date' ? '-' : newDate
   }
 
