@@ -1,8 +1,6 @@
 import { config } from '@/app/_infrastructure/config'
-import PostOverlayCard from '@/components/molecules/card/PostOverlayCard'
 import Advertisement from '@/components/organism/advertisement/Advertisement'
 import LatestPost from '@/components/organism/latestPost/LatestPost'
-import PageInfo from '@/components/organism/pageInfo/PageInfo'
 import { PostAction } from './_infrastructure/post.action'
 
 export const metadata = {
@@ -21,14 +19,6 @@ const BlogListing = async () => {
     <main>
       <div className="container mx-auto">
         <section>
-          <PageInfo />
-        </section>
-
-        <section className="my-12">
-          <PostOverlayCard />
-        </section>
-
-        <section className="my-20">
           <LatestPost data={data} />
         </section>
 

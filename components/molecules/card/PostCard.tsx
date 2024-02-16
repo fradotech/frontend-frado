@@ -42,7 +42,7 @@ const PostCard: (props: TProps) => JSX.Element = (props: TProps) => {
             {props.data.title}
           </h4>
           <p
-            className="mb-2 overflow-hidden overflow-ellipsis"
+            className="mb-2 overflow-hidden overflow-ellipsis opacity-60"
             style={{
               display: '-webkit-box',
               WebkitBoxOrient: 'vertical',
@@ -65,7 +65,7 @@ const PostCard: (props: TProps) => JSX.Element = (props: TProps) => {
           })}
         </div>
         <Link href="/single-post">
-          <div className="mt-2 flex justify-between">
+          <div className="mt-2 flex justify-between opacity-75">
             <p className="text-base">{Util.formatDate(props.data.createdAt)}</p>
             <p className="text-base">{`${
               props.data.readingTimeInMinutes || 2

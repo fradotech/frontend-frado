@@ -18,7 +18,7 @@ const Author = async () => {
       </section>
 
       <section>
-        <LatestPost data={data} />
+        <LatestPost title="Latest Post" data={data} />
       </section>
     </main>
   )
