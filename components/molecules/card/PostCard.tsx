@@ -17,7 +17,7 @@ type TProps = {
 
 const PostCard: (props: TProps) => JSX.Element = (props: TProps) => {
   return (
-    <div className="card w-fit p-2 border-b md:border-b-0">
+    <div className="p-2 border-b md:border-b-0">
       <Link href="/single-post">
         <figure>
           <Image
