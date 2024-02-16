@@ -32,7 +32,7 @@ const AuthorInfo = () => {
           </span>
         </div>
       </div>
-      <p className="text-sm sm:text-lg text-base-content/70 text-center py-6 max-w-2xl w-full mx-auto">
+      <p className="text-sm sm:text-lg text-base-content/70 text-center py-6 max-w-4xl w-full mx-auto">
         Fullstack Typescript Developer with experience in building web
         applications using React, Node.js, .Net, and Golang. Experience in
         implementing modular Golang & NestJS architecture, dependency injection,
