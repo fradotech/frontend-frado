@@ -1,5 +1,5 @@
-import { CompanyLogo } from '@/components/molecules/Identity/Logo'
 import Link from 'next/link'
+import { socialShare } from '../authorInfo/AuthorInfo'
 
 /**
  * Our Footer is a reusable UI component that used to represent bottom section of any website.
@@ -14,33 +14,23 @@ const Footer = () => {
     <footer className="px-5 md:px-0 font-sans">
       <div className="container mx-auto">
         <div className="flex flex-col gap-4 md:gap-0 md:flex-row items-center justify-between py-8 border-t border-base-content/10">
-          <div className="flex items-center gap-2.5">
-            <Link href="/">
-              <CompanyLogo className={`text-base-content`} />
-            </Link>
-            <div>
-              <h4 className="text-xl text-base-content font-sans">Fradotech</h4>
-              <p className="mt-0.5 text-base-content/70 text-base">
-                © Copyright {new Date().getFullYear()}{' '}
-                <strong>fradotech</strong>
-              </p>
-            </div>
+          <div>
+            <p className="mt-0.5 text-base-content/70 text-base">
+              © Copyright {new Date().getFullYear()} <strong>fradotech</strong>
+            </p>
           </div>
-          {/* TODO: sosmed */}
-          {/* <div className="flex items-center gap-4 text-base-content/70">
-            <Link
-              href="/"
-              className="text-base border-r border-base-content/10 pr-4  hover:text-primary transition hover:duration-300"
-            >
-              Privacy Policy
-            </Link>
-            <Link
-              href="/"
-              className="text-base hover:text-primary transition hover:duration-300"
-            >
-              Cookie Policy
-            </Link>
-          </div> */}
+          <div className="flex items-center justify-center gap-2">
+            {socialShare?.map((item, index) => (
+              <Link
+                href={item?.link}
+                target="_blank"
+                key={index}
+                className="bg-secondary text-secondary-content hover:text-primary-content w-8 h-8 flex justify-center items-center rounded-md hover:bg-primary transition duration-300 ease-in-out"
+              >
+                {item?.icon()}
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </footer>

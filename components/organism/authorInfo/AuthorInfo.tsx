@@ -16,7 +16,7 @@ const AuthorInfo = () => {
         <div className="avatar">
           <div className="w-16 rounded-full">
             <Image
-              src="https://placehold.it/100x100"
+              src="https://lh3.googleusercontent.com/u/0/drive-viewer/AEYmBYSK636kqUCH7pz_I_IjoY9SlMOXkazNR_2_8cTeL0nQJgc5Fd-k7Duhdqx3Rf-avmGeivLfBhHU2n22P65vWM3yLi-i=w2880-h1412"
               width={64}
               height={64}
               alt="avatar_image"
@@ -25,18 +25,21 @@ const AuthorInfo = () => {
         </div>
         <div>
           <h5 className="text-base-content text-base sm:text-xl font-medium">
-            Jonathan Doe
+            Framesta Fernando Wijaya
           </h5>
           <span className="text-base-content/60 text-xs sm:text-sm">
-            Collaborator & Editor
+            Software Developer
           </span>
         </div>
       </div>
       <p className="text-sm sm:text-lg text-base-content/70 text-center py-6 max-w-2xl w-full mx-auto">
-        Meet Jonathan Doe, a passionate writer and blogger with a love for
-        technology and travel. Jonathan holds a degree in Computer Science and
-        has spent years working in the tech industry, gaining a deep
-        understanding of the impact technology has on our lives.
+        Fullstack Typescript Developer with experience in building web
+        applications using React, Node.js, .Net, and Golang. Experience in
+        implementing modular Golang & NestJS architecture, dependency injection,
+        and microservices. Passionate about using Atomic Design in Frontend and
+        Clean Architecture in Backend to create clean code that is readable,
+        reusable, maintainable, and testable. Experience in building scalable
+        applications with Clean Architecture and Domain Driven Design.
       </p>
       <div className="flex items-center justify-center gap-2">
         {socialShare?.map((item, index) => (
@@ -56,8 +59,7 @@ const AuthorInfo = () => {
 
 export default AuthorInfo
 
-// social share icons
-const socialShare = [
+export const socialShare = [
   {
     id: 1,
     icon: () => (
