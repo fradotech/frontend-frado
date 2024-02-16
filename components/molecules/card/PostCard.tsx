@@ -24,8 +24,8 @@ const PostCard: (props: TProps) => JSX.Element = (props: TProps) => {
             src={props.data.imageUrl || 'https://placehold.it/360x240'}
             alt="image_post"
             width={360}
-            height={240}
-            style={{ maxHeight: '240px', minHeight: '240px' }}
+            height={200}
+            style={{ maxHeight: '200px', minHeight: '200px' }}
           />
         </figure>
       </Link>
