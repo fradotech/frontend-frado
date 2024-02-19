@@ -1,5 +1,6 @@
 'use client'
 import { headerMenus } from '@/app/_data/headerData'
+import { config } from '@/app/_infrastructure/config'
 import useMode from '@/app/_infrastructure/themeMode'
 import { CompanyLogo } from '@/components/molecules/Identity/Logo'
 import Link from 'next/link'
@@ -30,7 +31,9 @@ const Header = () => {
               <CompanyLogo className={`text-base-content`} />
             </Link>
             <nav className="hidden xl:block col-span-6">
-              <h4 className="text-xl text-base-content font-sans">Fradotech</h4>
+              <h4 className="text-xl text-base-content font-sans">
+                {config.app.name}
+              </h4>
             </nav>
           </div>
           <nav className="hidden xl:block col-span-6">

@@ -4,7 +4,7 @@ const nextConfig = {
     domains: [
       'placehold.it',
       'via.placeholder.com',
-      'fradotech.onrender.com',
+      'frado.onrender.com',
       'lh3.googleusercontent.com',
     ],
   },

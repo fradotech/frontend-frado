@@ -16,7 +16,7 @@ const Footer = () => {
         <div className="flex flex-col gap-4 md:gap-0 md:flex-row items-center justify-between py-8 border-t border-base-content/10">
           <div>
             <p className="mt-0.5 text-base-content/70 text-base">
-              © Copyright {new Date().getFullYear()} <strong>fradotech</strong>
+              © Copyright {new Date().getFullYear()} <strong>frado</strong>
             </p>
           </div>
           <div className="flex items-center justify-center gap-2">
