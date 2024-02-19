@@ -1,4 +1,5 @@
 import { config } from '@/app/_infrastructure/config'
+import { IndexSortOderEnum } from '@/app/_infrastructure/interfaces/index.interface'
 import AuthorInfo from '@/components/organism/authorInfo/AuthorInfo'
 import LatestPost from '@/components/organism/latestPost/LatestPost'
 import { PostAction } from '../blog/_infrastructure/post.action'
@@ -9,7 +10,10 @@ export const metadata = {
 }
 
 const Author = async () => {
-  const { data } = await PostAction.fetch()
+  const { data } = await PostAction.fetch({
+    sortField: 'views',
+    sortOrder: IndexSortOderEnum.Desc,
+  })
 
   return (
     <main>
@@ -18,7 +22,7 @@ const Author = async () => {
       </section>
 
       <section>
-        <LatestPost title="Latest Post" data={data} />
+        <LatestPost title="Popular Post" data={data} />
       </section>
     </main>
   )

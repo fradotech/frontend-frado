@@ -1,6 +1,7 @@
 import axios, { AxiosError, AxiosHeaders, RawAxiosRequestHeaders } from 'axios'
 import { config } from './config'
 import { IApiRes } from './interfaces/api-responses.interface'
+import { IndexRequest } from './interfaces/index.request'
 
 const headers: RawAxiosRequestHeaders | AxiosHeaders = {}
 
@@ -19,11 +20,20 @@ const notificationError = (e: AxiosError<IApiRes<unknown>>): void => {
 }
 
 export class API {
-  static async get(endpoint: string, params?: any): Promise<any> {
+  static async get(endpoint: string, params?: IndexRequest): Promise<any> {
     try {
-      const data = await fetch(`${config.server.hostApi}${endpoint}`, {
-        next: { revalidate: 60 },
-      })
+      const queryString = params
+        ? '?' + new URLSearchParams(Object.entries(params)).toString()
+        : ''
+
+      const data = await fetch(
+        `${config.server.hostApi}${endpoint}${queryString}`,
+        config.server.nodeEnv !== 'production'
+          ? {
+              next: { revalidate: 60 },
+            }
+          : undefined,
+      )
 
       this.catch({ data })
 

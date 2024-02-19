@@ -8,6 +8,7 @@ export const config = {
     name: Util.titleCase(process.env.APP_TITLE || 'frado'),
   },
   server: {
+    nodeEnv: process.env.NODE_ENV || 'local',
     prefix: prefix,
     host,
     hostApi: `${host}${prefix}`,

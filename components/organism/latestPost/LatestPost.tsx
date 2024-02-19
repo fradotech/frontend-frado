@@ -7,9 +7,9 @@ type TProps = {
   data: IPost[]
 }
 
-const LatestPost: (props: TProps) => JSX.Element = (props: TProps) => {
+const LatestPost: React.FC<TProps> = (props) => {
   return (
-    <div className="container mx-auto mt-12 mb-24 px-5 sm:px-0">
+    <div className="container mx-auto mb-24 px-5 sm:px-0">
       {props.title && (
         <h3 className="text-base-content font-bold text-2xl mb-8">
           {props.title}
