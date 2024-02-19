@@ -1,7 +1,6 @@
 import { config } from '@/app/_infrastructure/config'
 import { Util } from '@/app/_infrastructure/util'
 import Image from 'next/image'
-import 'react-quill/dist/quill.snow.css' // import styles
 import { PostAction } from '../blog/_infrastructure/post.action'
 
 export const metadata = {
@@ -11,6 +10,7 @@ export const metadata = {
 
 /* TODO:
  * [ ] Show trending posts
+ * [ ] Read by slug
  */
 
 type TProps = {
